@@ -1,1 +1,348 @@
+html_content = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #60a5fa;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+        }
+
+        .category-section {
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #93c5fd;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #334155;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-card {
+            background: linear-gradient(145deg, #1e293b 0%, #334155 100%);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid #475569;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: #60a5fa;
+        }
+
+        .tool-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #bfdbfe;
+            margin-bottom: 1rem;
+        }
+
+        .tool-description {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .get-started-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            margin-top: auto;
+        }
+
+        .get-started-btn:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AI Tools Dashboard</h1>
+            <p>Discover the best AI tools for your business and creative needs</p>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">AI Tool Aggregator and AI Agent</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3 class="tool-name">Abacus.ai</h3>
+                    <p class="tool-description">An AI Super Assistant For Enterprises And Professionals. Abacus.AI is the world's first AI super assistant built on our state-of-the-art generative AI technology.</p>
+                    <a href="https://tinyurl.com/3jtx8jk8" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">AI Writing</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3 class="tool-name">Rytr</h3>
+                    <p class="tool-description">AI writing assistant for high-quality content in 30+ languages, offering 40+ use cases and templates.</p>
+                    <a href="https://tinyurl.com/2jtkju44" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">Writesonic</h3>
+                    <p class="tool-description">Produces SEO-optimized articles and includes Chatsonic (GPT-4-powered chatbot). Supports 25+ languages and AI art generation.</p>
+                    <a href="https://writesonic.com" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">TextCortex</h3>
+                    <p class="tool-description">Customizable AI for businesses, offering content creation and automation. GDPR-compliant, supports 25+ languages.</p>
+                    <a href="https://tinyurl.com/v3vpzckr" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">AI Video</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3 class="tool-name">Synthesia</h3>
+                    <p class="tool-description">Creates professional marketing videos with AI avatars and text-to-video/audio conversion. Integrates with PowerPoint and Shopify.</p>
+                    <a href="https://synthesia.io" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">Pictory</h3>
+                    <p class="tool-description">Creates videos from text, popular among YouTubers and marketers. Long cookie duration.</p>
+                    <a href="https://pictory.ai/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">AI Image/Video Generation</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3 class="tool-name">BasedLabs</h3>
+                    <p class="tool-description">Suite of AI models for videos and images, with community features for user-generated content.</p>
+                    <a href="https://tinyurl.com/3npv6m58" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">Deep Art Effects</h3>
+                    <p class="tool-description">AI-powered photo and video editing using deep learning, with 2M+ users.</p>
+                    <a href="https://www.deeparteffects.com/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">AI Text-to-Speech & Audio</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3 class="tool-name">Murf AI</h3>
+                    <p class="tool-description">Creates human-like audio for audiobooks, videos, and podcasts.</p>
+                    <a href="https://murf.ai/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">ElevenLabs</h3>
+                    <p class="tool-description">High-quality, human-like speech in 32+ languages for audiobooks and voiceovers. Used by TIME and Perplexity.</p>
+                    <a href="https://tinyurl.com/yc55cub2" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">AI Productivity</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3 class="tool-name">Notion AI</h3>
+                    <p class="tool-description">All-in-one platform for note-taking, project management, and AI features like summarizing and translating.</p>
+                    <a href="https://www.notion.so/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">Reclaim.AI</h3>
+                    <p class="tool-description">AI-powered scheduling tool integrating with Google Calendar, Slack, and Asana.</p>
+                    <a href="https://reclaim.ai/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">AI Marketing/SEO</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3 class="tool-name">Semrush</h3>
+                    <p class="tool-description">Comprehensive platform with 55+ AI-powered tools for SEO, PPC, and competitor analysis.</p>
+                    <a href="https://www.semrush.com/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">AdCreative.ai</h3>
+                    <p class="tool-description">Generates high-converting ad creatives and text, with user-friendly affiliate dashboard.</p>
+                    <a href="https://www.adcreative.ai/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">AISEO</h3>
+                    <p class="tool-description">Generates high-ranking SEO articles in minutes for marketers.</p>
+                    <a href="https://aiseo.ai/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">Shakespeare</h3>
+                    <p class="tool-description">Automates content creation and targets audiences for better campaign results. (Disabled Affiliate)</p>
+                    <a href="https://shakespeare.ai/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">Frase</h3>
+                    <p class="tool-description">SEO tool for generating high-quality content quickly.</p>
+                    <a href="https://frase.io/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">Scalenut</h3>
+                    <p class="tool-description">Manages SEO lifecycle with keyword plans and 40+ AI templates. Entry-level plan at $20/month.</p>
+                    <a href="https://www.scalenut.com/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">AI Data Extraction</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3 class="tool-name">Browse AI</h3>
+                    <p class="tool-description">Automated data extraction from websites and documents, with a clean affiliate dashboard.</p>
+                    <a href="https://www.browse.ai/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">Octoparse</h3>
+                    <p class="tool-description">Automated data extraction from websites and documents, with a clean affiliate dashboard.</p>
+                    <a href="https://www.octoparse.com/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">AI Website & App Builder</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3 class="tool-name">Bubble.io</h3>
+                    <p class="tool-description">AI-powered website builder creating professional websites from brief descriptions.</p>
+                    <a href="https://bubble.io/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">Mixo</h3>
+                    <p class="tool-description">AI-powered website builder creating professional websites from brief descriptions.</p>
+                    <a href="https://www.mixo.io/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">10Web</h3>
+                    <p class="tool-description">WordPress platform with AI website builder, offering optimization and security for small businesses.</p>
+                    <a href="https://10web.io/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">Specialized AI Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3 class="tool-name">CustomGPT.ai</h3>
+                    <p class="tool-description">Creates custom AI chatbots for businesses in sectors like law and education, supporting 93+ languages. Built on GPT-4.</p>
+                    <a href="https://customgpt.ai/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">MindStudio</h3>
+                    <p class="tool-description">No-code platform for creating AI agents for tasks like content creation, used by Adobe and Google.</p>
+                    <a href="https://mindstudio.ai/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+                <div class="tool-card">
+                    <h3 class="tool-name">Instantly.ai</h3>
+                    <p class="tool-description">Scales outreach with unlimited email accounts and generative AI for personalized emails.</p>
+                    <a href="https://instantly.ai/" target="_blank" class="get-started-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Automated AI Profits Dashboard. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>'''
+
+# Save the HTML file
+with open('ai_tools_dashboard.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("AI Tools Dashboard HTML file created successfully!")
+print("File saved as: ai_tools_dashboard.html")
